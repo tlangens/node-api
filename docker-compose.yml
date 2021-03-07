@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  node:
+    image: node:15.11
+    volumes:
+      - .:/src
+    working_dir: "/src"
+    command: ["npm", "start"]
+    ports:
+      - "3000:3000"
+
+#  db:
+#    image: "postgres"
+#    environment:
+#      POSTGRES_USER: "postgres"
+#      POSTGRES_PASSWORD: "postgres"
+#      POSTGRES_DB: "node-api"
